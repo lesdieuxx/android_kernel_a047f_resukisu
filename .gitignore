@@ -1,0 +1,4 @@
+.requirements
+out/
+scripts/fmp/__pycache__/
+build/
