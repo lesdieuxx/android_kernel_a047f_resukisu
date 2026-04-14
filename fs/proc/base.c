@@ -1729,7 +1729,7 @@ static int do_proc_readlink(struct path *path, char __user *buffer, int buflen)
 			len = strlen(tmp);
 			if (copy_to_user(buffer, tmp, len))
 				len = -EFAULT;
-			kfree(tmp);
+			free_page((unsigned long)tmp);
 			return len;
 		}
 	}
@@ -1746,7 +1746,7 @@ static int do_proc_readlink(struct path *path, char __user *buffer, int buflen)
 					vlen = buflen;
 				if (copy_to_user(buffer, vpath, vlen) == 0) {
 					kfree(vpath);
-					kfree(tmp);
+					free_page((unsigned long)tmp);
 					return vlen;
 				}
 				kfree(vpath);
