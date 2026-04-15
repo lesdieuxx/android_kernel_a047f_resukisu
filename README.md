@@ -12,7 +12,6 @@ Modified A04s android kernel with **ReSukiSU** and **SUSFS**.
 - Added [SUSFS v2.1.0](https://gitlab.com/simonpunk/susfs4ksu) with needed backports.
 - Added [BBG (Baseband Guard)](https://github.com/vc-teahouse/Baseband-guard) with recovery protection. We don't want to get our recovery get nuked, do we? 
 	- Boot partition is allowed for flashing kernel
-- Added [ZeroMount](https://github.com/Enginex0/zeromount) implementation.
 - Enabled SELinux switch, ability to `setenforce 0/1`.
 - Disabled Samsung securities.
 - Set LZ4 for default compression algorithm for ZRAM.
